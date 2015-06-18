@@ -1,0 +1,24 @@
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to "RoRTemplate", root_path, class: 'navbar-brand' %>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav navbar-right">
+        <% if !current_user %>
+          <li><%= link_to "Sign up", new_user_registration_path, class: 'navbar-link' %></li>
+          <li><%= link_to "Login", user_session_path, class: 'navbar-link' %></li>
+        <% else %>
+          <li id='show-user'><em><%= current_user.email %></em></li>
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

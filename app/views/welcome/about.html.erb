@@ -1,0 +1,34 @@
+<div class="hero-unit">
+  <div class="container">
+    <h1>Resultado: Encuesta Ley de Herencia</h1>
+    <p class="lead">
+      # a favor --- # en contra
+      <% if !current_user %>
+        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-lg btn-success' %>
+        <span class='fa fa-check'></span></a>
+      <% end %>
+    </p>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="selling-points row">
+    <div class="point col-md-4">
+      <h2>User Registration & Login</h2>
+      <p>
+        This app is configured to use Devise for User Registration & Login
+      </p>
+    </div>
+    <div class="point col-md-4">
+      <h2>BootStrap & FontAwesome</h2>
+      <p>
+        Includes Bootstrap-sass & FontAwesome-rails gems for formatting your views
+      </p>
+    </div>
+    <div class="point col-md-4">
+      <h2>Facebook Login</h2>
+      <p>
+        Uses OmniAuth & Devise gems for Facebook login.
+      </p>
+    </div>
+  </div>
+</div>
