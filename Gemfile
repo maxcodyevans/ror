@@ -61,3 +61,5 @@ gem 'devise'
 gem 'omniauth-facebook'
 
 gem 'tzinfo-data'
+
+gem 'rails_12factor', group: :production
