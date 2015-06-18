@@ -1,8 +1,35 @@
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Posicion', 'Numero'],
+          ['A Favor',     11],
+          ['En Contra',      14],
+        ]);
+
+        var options = {
+          title: 'Que opinas sobre la Ley de Herencia?'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  
+    
+  
+
 <div class="hero-unit">
   <div class="container">
-    <h1>Resultado: Encuesta Ley de Herencia</h1>
+    <h1><div id="piechart" style="width: 100%;"></div></h1>
     <p class="lead">
-      # a favor --- # en contra
+    	Encuestados ###### <br>
+      Que camino tomaremos? 
       <% if !current_user %>
         <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-lg btn-success' %>
         <span class='fa fa-check'></span></a>
