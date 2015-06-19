@@ -1,4 +1,4 @@
-rakclass AddVoteToUsers < ActiveRecord::Migration
+class AddVoteToUsers < ActiveRecord::Migration
   def change
     add_column :users, :vote, :int
   end
