@@ -30,7 +30,7 @@
     
        <div class="field form-group">
       <%= f.label :vote %>Estas de Acuerdo con la ley de herencia?<br/>
-      <%= f.check_box :vote, {}, "thisvalue", "thatvalue"  %>
+      <%= f.password_field :vote, autocomplete: "off", class: 'form-control' %>
 
       
     </div>

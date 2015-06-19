@@ -12,11 +12,12 @@
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav navbar-right">
         <% if !current_user %>
+     
           <li><%= link_to "Vote", user_session_path, class: 'navbar-link' %></li>
         <% else %>
           <li id='show-user'><em><%= current_user.email %></em></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
-          <li><%= link_to "edit", edit_user_registration_path, class: 'navbar-link'  %></li>
+          <li><%= link_to "Votar", edit_user_registration_path,  class: 'btn btn-lg btn-success'  %></li>
         <% end %>
       </ul>
     </div>

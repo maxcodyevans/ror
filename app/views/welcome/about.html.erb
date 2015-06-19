@@ -7,8 +7,8 @@
 
         var data = google.visualization.arrayToDataTable([
           ['Posicion', 'Numero'],
-          ['A Favor',     11],
-          ['En Contra',      14],
+          ['A Favor',     <%= @favor %> ],
+          ['En Contra',     <%= @contra %> ],
         ]);
 
         var options = {
@@ -25,15 +25,18 @@
   
 
 <div class="hero-unit">
-	<% if current_user %>
-        <%= link_to 'Vote', new_user_registration_path, class: 'btn btn-lg btn-success' %>
-        <span class='fa fa-check'></span></a>
-      <% end %>
+
+
   <div class="container">
     <h1><div id="piechart" style="width: 100%;"></div></h1>
     <p class="lead">
-    	Encuestados ###### <br>
-      Que camino tomaremos? 
+    	Encuestados <%= @total %> <br>
+    	Favor <%= @favor %> <br>
+    	Contra <%= @contra %> <br>
+
+    	
+   
+     
       
     </p>
   </div>
@@ -41,21 +44,25 @@
 <div class="container-fluid">
   <div class="selling-points row">
     <div class="point col-md-4">
-      <h2>User Registration & Login</h2>
+      <h2>Seguridad </h2>
       <p>
-        This app is configured to use Devise for User Registration & Login
+        Cada usuario debe registrarse por facebook, cada cuenta de facebook en Ecuador tiene 1 voto.<br>
+        La informacion es encryptada, segura, y manejada mediante Devise y OmniAuth en server Heroku<br>
+        Los resultados son visibles en-vivo, da tu opinion y observa el cambio!
+        
       </p>
     </div>
     <div class="point col-md-4">
-      <h2>BootStrap & FontAwesome</h2>
+      <h2>Objetivo</h2>
       <p>
-        Includes Bootstrap-sass & FontAwesome-rails gems for formatting your views
-      </p>
+        Crear un medio de encuesta usando medios sociales masivos independiente de cualquier influencia politica y completamente transparente. Simplemente buscamos la verdad y la expresion.
+         
+        </p>
     </div>
     <div class="point col-md-4">
-      <h2>Facebook Login</h2>
+      <h2>Transparencia</h2>
       <p>
-        Uses OmniAuth & Devise gems for Facebook login.
+        Cualquier pregunta o duda contactarse con mcevans@stanford.edu
       </p>
     </div>
   </div>
