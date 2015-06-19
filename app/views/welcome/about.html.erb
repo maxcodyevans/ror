@@ -25,15 +25,16 @@
   
 
 <div class="hero-unit">
+	<% if current_user %>
+        <%= link_to 'Vote', new_user_registration_path, class: 'btn btn-lg btn-success' %>
+        <span class='fa fa-check'></span></a>
+      <% end %>
   <div class="container">
     <h1><div id="piechart" style="width: 100%;"></div></h1>
     <p class="lead">
     	Encuestados ###### <br>
       Que camino tomaremos? 
-      <% if !current_user %>
-        <%= link_to 'Sign up', new_user_registration_path, class: 'btn btn-lg btn-success' %>
-        <span class='fa fa-check'></span></a>
-      <% end %>
+      
     </p>
   </div>
 </div>

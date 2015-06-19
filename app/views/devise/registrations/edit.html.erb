@@ -27,6 +27,13 @@
       <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
       <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
     </div>
+    
+       <div class="field form-group">
+      <%= f.label :vote %>Estas de Acuerdo con la ley de herencia?<br/>
+      <%= f.check_box :vote, {}, "thisvalue", "thatvalue"  %>
+
+      
+    </div>
 
     <div class="actions">
       <%= f.submit "Update", class: 'btn btn-inverse btn-lg btn-login' %>
