@@ -15,11 +15,10 @@
       <ul class="navbar-right">
         <% if !current_user %>
      
-          <%= link_to "Vote", user_session_path,  class: 'btn btn-lg btn-success'  %>
+          <%= link_to "Votar", user_session_path,  class: 'btn btn-lg btn-success'  %>
         <% else %>
-          <li id='show-user'><em><%= current_user.email %></em></li>
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
-          <%= link_to "Votar", edit_user_registration_path,  class: 'btn btn-lg btn-success'  %>
+          <li id='show-user'><em>Connectado como <%= current_user.email %></em></li>
+    
         <% end %>
       </ul>
     
