@@ -7,8 +7,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta property="og:url"                content="https://agile-everglades-9410.herokuapp.com/" />
+<meta property="og:type"               content="Encuesta" />
+<meta property="og:title"              content="Que opinas sobre la Ley de Herencia" />
+<meta property="og:description"        content="Una encuesta segura, clara y transparente para dar voz a los ecuatoriano" />
+<meta property="fb:app_id"        content="1619695788277680" />
 </head>
 <body class='<%= controller.controller_name %>'>
+	<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1619695788277680',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   <%= render 'layouts/navigation' %>
   <% if notice %>
     <p class="alert alert-success"><%= notice %></p>

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   
   get 'welcome/about'
   root to: 'welcome#about'
+  
+   match '/privacypolicy', :to => 'welcome#privacypolicy',          via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
