@@ -24,8 +24,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if resource.email_verified?
       super resource
     else
-      finish_sign_up_path(resource)
-      #put _
+      finish_signup_path(resource)
     end
   end
 end
