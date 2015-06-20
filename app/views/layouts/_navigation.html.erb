@@ -1,12 +1,7 @@
 <div class="navbar navbar-default navbar-static-top">
   <div class="container">
     <div class="navbar-header">
-      <button class="navbar-toggle" type="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+
       <%= link_to "De-Cabo-A-Rabo", root_path, class: 'navbar-brand' %>
 
       <div
@@ -16,17 +11,17 @@
   data-show-faces="true">
 </div>
     </div>
-    <div class="navbar-collapse collapse" id="navbar-main">
-      <ul class="nav navbar-nav navbar-right">
+   
+      <ul class="navbar-right">
         <% if !current_user %>
      
-          <li><%= link_to "Vote", user_session_path,  class: 'btn btn-lg btn-success'  %></li>
+          <%= link_to "Vote", user_session_path,  class: 'btn btn-lg btn-success'  %>
         <% else %>
           <li id='show-user'><em><%= current_user.email %></em></li>
-          <li><%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
-          <li><%= link_to "Votar", edit_user_registration_path,  class: 'btn btn-lg btn-success'  %></li>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+          <%= link_to "Votar", edit_user_registration_path,  class: 'btn btn-lg btn-success'  %>
         <% end %>
       </ul>
-    </div>
+    
   </div>
 </div>
