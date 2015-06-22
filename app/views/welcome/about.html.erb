@@ -1,5 +1,9 @@
 
-     <div class="container"><h2>Encuesta ley de herencia<h2></div>
+     <div class="container"><h2>Encuesta - ley de herencia<h2>  	<h4>Encuestados <%= @total %> <br>
+    	A Favor <%= @favor %> || En Contra <%= @contra %> </h4></div>
+     	    <p class="lead">
+  
+    	
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
@@ -13,9 +17,9 @@
         ]);
 
         var options = {
-          title: 'Que opinas sobre la Ley de Herencia?',
+          title: '¿Qué opinas sobre la Ley de Herencia?',
           is3D: true,
-          chartArea:{width:'100%'},
+          chartArea:{width:'100%',height:'100%'},
           fontSize:20
         };
 
@@ -36,10 +40,7 @@
 
   <div class="container">
     <h1><div id="piechart" style="width: 100%;"></div></h1>
-    <p class="lead">
-    	Encuestados <%= @total %> <br>
-    	Favor <%= @favor %> <br>
-    	Contra <%= @contra %> <br>
+
 
     	
    
@@ -54,15 +55,15 @@
       <h2>Seguridad </h2>
       <p>
         Cada usuario debe registrarse por facebook, cada cuenta de facebook en Ecuador tiene 1 voto.<br>
-        La informacion es encryptada, segura, y manejada mediante Devise y OmniAuth en server Heroku<br>
-        Los resultados son visibles en-vivo, da tu opinion y observa el cambio!
+        La información es encryptada, segura, y manejada mediante Devise y OmniAuth en server Heroku<br>
+        Los resultados son visibles en-vivo, da tu opinión y observa el cambio!
         
       </p>
     </div>
     <div class="point col-md-4">
       <h2>Objetivo</h2>
       <p>
-        Crear un medio de encuesta usando medios sociales masivos independiente de cualquier influencia politica y completamente transparente. Simplemente buscamos la verdad y la expresion.
+        Crear un medio de encuesta usando medios sociales masivos independiente de cualquier influencia politica y completamente transparente. Simplemente buscamos la verdad y la expresión.
          
         </p>
     </div>
