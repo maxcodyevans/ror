@@ -1,13 +1,13 @@
 <div class="authform">
-  <h2>Encuesta</h2>
+  <h2>Pregunta</h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name),  class: "form", html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
     
        <div class="field form-group">
-       	<h2>Estas de Acuerdo con la ley de herencia?</h2>
+       	<h2>Estas de acuerdo con el proyecto de la ley de herencia?</h2>
        	
-      <br><br>Si estoy de acuerdo<br/>
+      <br><br>Si, estoy de acuerdo<br/>
       <%= f.radio_button(:vote, "1") %>
       <br>No estoy de acuerdo<br/>
       <%= f.radio_button(:vote, "0") %>
