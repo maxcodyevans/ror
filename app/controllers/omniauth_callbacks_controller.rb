@@ -24,7 +24,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if resource.email_verified?
       super resource
     else
-      redirect_to root_url
+      redirect_to root_url(resource)
     end
   end
 end
