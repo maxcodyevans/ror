@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'welcome#about'
   
    match '/privacypolicy', :to => 'welcome#privacypolicy',          via: 'get'
+      match '/termsofservice', :to => 'welcome#termsofservice',          via: 'get'
   #  match 'users/signup',  :to => 'registrations#new',            via: 'get', as: 'signup'
 
   # The priority is based upon order of creation: first created -> highest priority.
