@@ -17,7 +17,7 @@
      
           <%= link_to "Votar", user_session_path,  class: 'btn btn-lg btn-success'  %>
         <% else %>
-          <li id='show-user'><em><%= current_user.email %></em> - <%= link_to "Desconectar de facebook", destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
+          <li id='show-user'><em><%= current_user.email %></em> - <%= link_to "Desconectar de Facebook", destroy_user_session_path, method: :delete, class: 'navbar-link'  %></li>
     
         <% end %>
       </ul>
